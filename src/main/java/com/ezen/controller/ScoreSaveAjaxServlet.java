@@ -1,4 +1,4 @@
-package controller;
+package com.ezen.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,14 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.ezen.book.BookscoreDAO;
+import com.ezen.book.BookscoreVO;
 import com.google.gson.JsonObject;
 
-import book.BookscoreDAO;
-import book.BookscoreVO;
-
-/**
- * Servlet implementation class ScoreSaveServlet
- */
 @WebServlet("/scoreSaveAjax")
 public class ScoreSaveAjaxServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

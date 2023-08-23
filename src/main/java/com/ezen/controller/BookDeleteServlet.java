@@ -1,4 +1,4 @@
-package controller;
+package com.ezen.controller;
 
 import java.io.IOException;
 
@@ -9,26 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import book.BookDAO;
+import com.ezen.book.BookDAO;
 
-/**
- * Servlet implementation class BookDeketeServlet
- */
 @WebServlet("/bDelete")
-public class BookDeketeServlet extends HttpServlet {
+public class BookDeleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public BookDeketeServlet() {
+
+    public BookDeleteServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//encoding x
 		//파라메타 받기
@@ -43,11 +33,7 @@ public class BookDeketeServlet extends HttpServlet {
 		}
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

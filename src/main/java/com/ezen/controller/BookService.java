@@ -42,8 +42,23 @@ public class BookService {
 			return BookUdateService();
 		} else if(cmd.equals("imgdown")) {
 			return BookImgDownService();
+		} else if(cmd.equals("del")) {
+			return BookDeleteService();
 		} 
 		return view;
+	}
+
+	private String BookDeleteService() {
+		//파라메타 받기
+		int bno=Integer.parseInt(request.getParameter("bno"));
+		//dao 객체생성
+		BookDAO dao=BookDAO.getInstance();
+		//dao 메소드 구현
+		int result=dao.deleteBook(bno); //disp='n' update
+		if(result==1) {//삭제 완료
+			return "book?cmd=list";
+		}
+		return null;
 	}
 
 	private String BookImgDownService() throws IOException {
